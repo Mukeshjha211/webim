@@ -1,0 +1,86 @@
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem;
+  }
+  
+  .footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-list a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ffca28; /* or any color you prefer for hover effect */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .footer-bottom p {
+    margin-bottom: 1rem;
+  }
+  
+  .legal-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .legal-links li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  .legal-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  

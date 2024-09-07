@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with mukesh
+          Learn React with mukesh go with
         </a>
       </header>
     </div>

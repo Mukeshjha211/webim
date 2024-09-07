@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom"; // Import Routes and Route
+import HeroSection from "./components/HeroSection";
+// import About from './components/About';
+// import Contact from './components/Contact';
+import NotFound from "./components/NotFound"; // You can create a custom 404 page
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with mukesh go with
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<HeroSection />} /> {/* Home */}
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
     </div>
   );
 }

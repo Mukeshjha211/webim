@@ -1,0 +1,39 @@
+
+/* src/components/NotFound.css */
+
+/* Center the content vertically and horizontally */
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Light background color */
+    text-align: center;
+  }
+  
+  /* Style for the main title */
+  .notfound-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dc3545; /* Bootstrap red color for emphasis */
+    margin-bottom: 1rem;
+  }
+  
+  /* Style for the message */
+  .notfound-message {
+    font-size: 1.25rem;
+    color: #6c757d; /* Bootstrap gray color for the text */
+    margin-bottom: 2rem;
+  }
+  
+  /* Style for the link back to home */
+  .notfound-link {
+    font-size: 1rem;
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+  }
+  
+  .notfound-link:hover {
+    text-decoration: underline;
+  }
+  

@@ -2,15 +2,15 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './TemplateDetails.css';
 
-// Dummy data for testing
+// Real data for testing
 const templateData = [
   {
     id: 1,
-    name: "Minimalist Pro",
-    image: "https://via.placeholder.com/1200x600?text=Minimalist+Pro+Demo",
-    features: ["Responsive Design", "Clean Layout", "Easy Customization"],
+    name: "Mukesh Jha's Portfolio",
+    image: "https://mukeshjha.netlify.app/images/thumbnail.jpg", // Replace with real image URL if available
+    features: ["Responsive Design", "Modern Layout", "Professional Style"],
     customization: ["Color Schemes", "Fonts", "Layout Options"],
-    price: "$75",
+    price: "$75", // Adjust pricing if needed
     testimonials: [
       "Great template! Easy to customize and looks professional.",
       "Perfect for my portfolio. The responsive design is excellent."
@@ -18,14 +18,26 @@ const templateData = [
   },
   {
     id: 2,
-    name: "Creative Spark",
-    image: "https://via.placeholder.com/1200x600?text=Creative+Spark+Demo",
-    features: ["Modern Design", "Dynamic Animations", "Interactive Elements"],
+    name: "Ishwar Sharma's Portfolio",
+    image: "https://ishwarsharma.netlify.app/images/thumbnail.jpg", // Replace with real image URL if available
+    features: ["Creative Animations", "Interactive Layout", "Custom Design"],
     customization: ["Color Schemes", "Fonts", "Animations"],
-    price: "$100",
+    price: "$100", // Adjust pricing if needed
     testimonials: [
       "Amazing design! The animations really make my portfolio stand out.",
       "Love the interactive elements. Highly recommend this template."
+    ]
+  },
+  {
+    id: 3,
+    name: "Aniket Singh's Portfolio",
+    image: "https://aniketsinghjaat.netlify.app/images/thumbnail.jpg", // Replace with real image URL if available
+    features: ["Minimalist Design", "Fast Performance", "SEO Optimized"],
+    customization: ["Color Schemes", "Fonts", "Layout Options"],
+    price: "$85", // Adjust pricing if needed
+    testimonials: [
+      "A clean and effective design. Ideal for a minimalist approach.",
+      "The performance is outstanding. Highly satisfied with this template."
     ]
   }
 ];

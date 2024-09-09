@@ -1,23 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Project.css";
+import "./Project.css"; // Ensure you have some styling here
 
 const templates = [
   {
     id: 1,
-    name: "Minimalist Pro",
-    image: "https://via.placeholder.com/300x200?text=Minimalist+Pro",
-    features: ["Responsive Design", "Clean Layout", "Easy Customization"],
-    category: "minimalist",
+    name: "Mukesh Jha's Portfolio",
+    image: "https://via.placeholder.com/300x200?text=Mukesh+Jha", // Replace with real image if available
+    features: ["Responsive Design", "Modern Layout", "Professional Style"],
+    category: "professional",
+    demoLink: "https://mukeshjha.netlify.app/", // Add the real demo link
   },
   {
     id: 2,
-    name: "Creative Spark",
-    image: "https://via.placeholder.com/300x200?text=Creative+Spark",
-    features: ["Modern Design", "Dynamic Animations", "Interactive Elements"],
+    name: "Ishwar Sharma's Portfolio",
+    image: "https://via.placeholder.com/300x200?text=Ishwar+Sharma", // Replace with real image if available
+    features: ["Creative Animations", "Interactive Layout", "Custom Design"],
     category: "creative",
+    demoLink: "https://ishwarsharma.netlify.app/", // Add the real demo link
   },
-  // Add more dummy templates if needed
+  {
+    id: 3,
+    name: "Aniket Singh's Portfolio",
+    image: "https://via.placeholder.com/300x200?text=Aniket+Singh", // Replace with real image if available
+    features: ["Minimalist Design", "Fast Performance", "SEO Optimized"],
+    category: "minimalist",
+    demoLink: "https://aniketsinghjaat.netlify.app/", // Add the real demo link
+  },
 ];
 
 const categories = ["all", "creative", "minimalist", "professional"];
@@ -34,6 +43,8 @@ const PortfolioGallery = () => {
     <section id="portfolio-gallery" className="portfolio-gallery">
       <div className="container">
         <h2 className="gallery-title">Browse Our Templates</h2>
+
+        {/* Filter buttons */}
         <div className="filters">
           {categories.map((category) => (
             <button
@@ -47,6 +58,8 @@ const PortfolioGallery = () => {
             </button>
           ))}
         </div>
+
+        {/* Template cards */}
         <div className="templates">
           {filteredTemplates.map((template) => (
             <div key={template.id} className="template-card">
@@ -61,9 +74,11 @@ const PortfolioGallery = () => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <Link to={`/portfolio/${template.id}`} className="cta-button">
+
+              {/* View Demo button */}
+              <a href={template.demoLink} className="cta-button" target="_blank" rel="noopener noreferrer">
                 View Demo
-              </Link>
+              </a>
             </div>
           ))}
         </div>

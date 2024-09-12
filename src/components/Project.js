@@ -64,7 +64,7 @@ const PortfolioGallery = () => {
         <h2 className="gallery-title">Browse Our Templates</h2>
 
         {/* Search Input */}
-        <div className="search-container">
+        {/* <div className="search-container">
           <input
             type="text"
             placeholder="Search Templates..."
@@ -72,7 +72,7 @@ const PortfolioGallery = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="search-input"
           />
-        </div>
+        </div> */}
 
         {/* Filter buttons */}
         <div className="filters">

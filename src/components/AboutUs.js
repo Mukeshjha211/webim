@@ -24,7 +24,7 @@ const AboutUs = () => {
     <section id="about-us" className="about-us-section">
       <div className="container">
         <div className="about-content">
-          <h2 className="about-title">About Us</h2>
+          <h2 className="about-title">Us</h2>
           <p className="about-description">
             At Webim, we are dedicated to helping students and professionals build impressive and impactful portfolios. Our team combines creativity with technical expertise to deliver high-quality, affordable solutions tailored to your unique needs. With a passion for design and a commitment to excellence, we ensure that every portfolio we create is not just visually stunning but also highly functional and effective.
           </p>

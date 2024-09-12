@@ -16,7 +16,9 @@ const HeroSection = () => {
             that sets you apart. Perfect for students, freelancers, and
             professionals!
           </p>
-          <button className="hero-cta">Get Started Today</button>
+          <a className="hero-cta" href="#about" style={{textDecoration:'none'}}>
+            Get Started Today
+          </a>
         </div>
 
         {/* Right side: Image or mockup */}

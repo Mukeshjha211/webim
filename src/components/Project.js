@@ -1,48 +1,78 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Project.css"; // Ensure you have some styling here
+import "./Project.css";
 
+// Template data
 const templates = [
   {
     id: 1,
     name: "Mukesh Jha's Portfolio",
-    image: "https://via.placeholder.com/300x200?text=Mukesh+Jha", // Replace with real image if available
+    image: "https://via.placeholder.com/300x200?text=Mukesh+Jha",
     features: ["Responsive Design", "Modern Layout", "Professional Style"],
     category: "professional",
-    demoLink: "https://mukeshjha.netlify.app/", // Add the real demo link
+    demoLink: "https://mukeshjha.netlify.app/",
+    previewLink: "https://mukeshjha.netlify.app/"
   },
   {
     id: 2,
     name: "Ishwar Sharma's Portfolio",
-    image: "https://via.placeholder.com/300x200?text=Ishwar+Sharma", // Replace with real image if available
+    image: "https://via.placeholder.com/300x200?text=Ishwar+Sharma",
     features: ["Creative Animations", "Interactive Layout", "Custom Design"],
     category: "creative",
-    demoLink: "https://ishwarsharma.netlify.app/", // Add the real demo link
+    demoLink: "https://ishwarsharma.netlify.app/",
+    previewLink: "https://ishwarsharma.netlify.app/"
   },
   {
     id: 3,
     name: "Aniket Singh's Portfolio",
-    image: "https://via.placeholder.com/300x200?text=Aniket+Singh", // Replace with real image if available
+    image: "https://via.placeholder.com/300x200?text=Aniket+Singh",
     features: ["Minimalist Design", "Fast Performance", "SEO Optimized"],
     category: "minimalist",
-    demoLink: "https://aniketsinghjaat.netlify.app/", // Add the real demo link
-  },
+    demoLink: "https://aniketsinghjaat.netlify.app/",
+    previewLink: "https://aniketsinghjaat.netlify.app/"
+  }
 ];
 
 const categories = ["all", "creative", "minimalist", "professional"];
 
 const PortfolioGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedTemplate, setSelectedTemplate] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const filteredTemplates =
-    selectedCategory === "all"
-      ? templates
-      : templates.filter((template) => template.category === selectedCategory);
+  const filteredTemplates = templates.filter(template => 
+    (selectedCategory === "all" || template.category === selectedCategory) &&
+    template.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const openModal = (template) => {
+    setLoading(true);
+    setSelectedTemplate(template);
+  };
+
+  const closeModal = () => {
+    setSelectedTemplate(null);
+  };
+
+  const handleLoad = () => {
+    setLoading(false);
+  };
 
   return (
     <section id="portfolio-gallery" className="portfolio-gallery">
       <div className="container">
         <h2 className="gallery-title">Browse Our Templates</h2>
+
+        {/* Search Input */}
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search Templates..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+        </div>
 
         {/* Filter buttons */}
         <div className="filters">
@@ -76,13 +106,41 @@ const PortfolioGallery = () => {
               </ul>
 
               {/* View Demo button */}
-              <a href={template.demoLink} className="cta-button" target="_blank" rel="noopener noreferrer">
+              <button
+                className="cta-button"
+                onClick={() => openModal(template)}
+              >
                 View Demo
-              </a>
+              </button>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal for preview */}
+      {selectedTemplate && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            {loading && <div className="spinner"></div>}
+            <iframe
+              src={selectedTemplate.previewLink}
+              title={selectedTemplate.name}
+              className="iframe-preview"
+              onLoad={handleLoad}
+            ></iframe>
+            <h3>{selectedTemplate.name}</h3>
+            <ul>
+              {selectedTemplate.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+            <a href={selectedTemplate.demoLink} className="cta-button" target="_blank" rel="noopener noreferrer">
+              View Live Demo
+            </a>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

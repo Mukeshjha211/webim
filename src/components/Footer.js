@@ -34,29 +34,29 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Follow Us</h3>
             <div className="social-icons">
-              <a
+              {/* <a
                 href="https://www.facebook.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
-              </a>
+              </a> */}
               <a
-                href="https://www.instagram.com/yourusername"
+                href="https://www.instagram.com/webim__/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
-                href="https://www.linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/webim-im-aa3453327/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               <a
-                href="https://twitter.com/yourusername"
+                href="https://x.com/i/flow/login?redirect_after_login=%2FWebim__"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -67,8 +67,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Contact Us</h3>
             <p>
-              <FontAwesomeIcon icon={faEnvelope} />{" "}
-              <a href="mailto:info@webim.com">info@webim.com</a>
+              <FontAwesomeIcon icon={faEnvelope} /> webim7452@gmail.com
             </p>
           </div>
         </div>

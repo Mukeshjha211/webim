@@ -12,7 +12,7 @@ const Contact = () => {
         </p>
         <div className="contact-links">
           <a
-            href="https://www.instagram.com/yourusername"
+            href="https://www.instagram.com/webim__/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link instagram"
@@ -25,20 +25,20 @@ const Contact = () => {
             Instagram
           </a>
           <a
-            href="https://wa.me/yourphonenumber"
+            href="https://x.com/Webim__"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link whatsapp"
+            className="contact-link twitter"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Twitter_X.png/512px-Twitter_X.png?20230729154337"
+              alt="Twitter"
               className="contact-icon"
             />
-            WhatsApp
+            Twitter
           </a>
           <a
-            href="https://www.linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/webim-im-aa3453327/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link linkedin"
@@ -50,7 +50,7 @@ const Contact = () => {
             />
             LinkedIn
           </a>
-          <a
+          {/* <a
             href="https://www.facebook.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
@@ -62,7 +62,7 @@ const Contact = () => {
               className="contact-icon"
             />
             Facebook
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

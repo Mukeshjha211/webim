@@ -103,12 +103,39 @@
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  margin: 1rem 0;
-  transition: background-color 0.3s ease;
+  margin: 1rem 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.select-button {
+  display: inline-block;
+  background-color: #28a745; /* Vibrant green */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px; /* More rounded corners for a modern look */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem; /* Slightly larger font size for emphasis */
+  margin: 1rem 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent; /* To add emphasis */
+}
+
+.select-button:hover {
+  background-color: #218838; /* Slightly darker green for hover effect */
+  transform: scale(1.1); /* Slightly larger on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adds depth */
+  border: 2px solid #1e7e34; /* Adds a border on hover */
+}
+
+.select-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Adds a focus ring */
 }
 
 /* Modal Styles */
@@ -134,6 +161,12 @@
   max-width: 900px;
   text-align: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .cta-button,
+.modal-content .select-button {
+  display: inline-block;
+  margin: 0.5rem;
 }
 
 .iframe-preview {
@@ -174,6 +207,91 @@
   100% { transform: rotate(360deg); }
 }
 
+/* Social Options */
+/* Contact Modal */
+.contact-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.contact-modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-modal-content h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-modal {
+  display: inline-block;
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-modal:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.close-modal:focus {
+  outline: none;
+}
+
+/* Social Options */
+.social-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.social-button {
+  background: #f4f4f4; /* Neutral background */
+  border: none;
+  border-radius: 50%;
+  color: #007bff; /* Primary color */
+  font-size: 1.5rem; /* Larger icon */
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+
+.social-button:hover {
+  background-color: #007bff; /* Primary color */
+  color: white;
+  transform: scale(1.1);
+}
+
+.social-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring */
+}
+
+
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
   .modal-content {
@@ -197,5 +315,10 @@
 
   .cta-button {
     padding: 0.5rem 1rem;
+  }
+
+  .social-options button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }

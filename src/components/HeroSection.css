@@ -1,4 +1,9 @@
 /* HeroSection.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .hero-section {
     background: linear-gradient(90deg, #007bff, #6610f2); /* Gradient background */
     min-height: 100vh;

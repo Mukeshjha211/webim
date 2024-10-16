@@ -4,7 +4,7 @@ import "./Pricing.css";
 const pricingPlans = [
   {
     plan: "Basic",
-    price: "$50",
+    price: "$49",
     features: [
       "One-page portfolio template",
       "Basic customization (text and images)",
@@ -14,7 +14,7 @@ const pricingPlans = [
   },
   {
     plan: "Standard",
-    price: "$100",
+    price: "$99",
     features: [
       "Multi-page portfolio template",
       "Advanced customization options",
@@ -25,7 +25,7 @@ const pricingPlans = [
   },
   {
     plan: "Premium",
-    price: "$150",
+    price: "$149",
     features: [
       "Custom portfolio template",
       "Comprehensive customization",
@@ -52,9 +52,9 @@ const Pricing = () => {
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
-              <a href="#" className="cta-button">
+              {/* <a href="#" className="cta-button">
                 Choose Plan
-              </a>
+              </a> */}
             </div>
           ))}
         </div>

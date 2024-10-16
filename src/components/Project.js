@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./Project.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import mukeshThumbnail from '../images/mukeshThumbnail.jpeg'
+import ishwarThumbnail from '../images/ishwarThumbnail.jpeg'
 
 // Template data
 const templates = [
   {
     id: 1,
     name: "Mukesh Jha's Portfolio",
-    image: "https://via.placeholder.com/300x200?text=Mukesh+Jha",
+    image: mukeshThumbnail,
     features: ["Responsive Design", "Modern Layout", "Professional Style"],
     category: "professional",
     demoLink: "https://mukeshjha.netlify.app/",
@@ -16,7 +18,7 @@ const templates = [
   {
     id: 2,
     name: "Ishwar Sharma's Portfolio",
-    image: "https://via.placeholder.com/300x200?text=Ishwar+Sharma",
+    image: ishwarThumbnail,
     features: ["Creative Animations", "Interactive Layout", "Custom Design"],
     category: "creative",
     demoLink: "https://ishwarsharma.netlify.app/",
